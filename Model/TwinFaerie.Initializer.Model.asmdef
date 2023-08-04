@@ -1,0 +1,22 @@
+{
+    "name": "TwinFaerie.Initializer.Setting",
+    "rootNamespace": "",
+    "references": [
+        "TypeReferences"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.solidalloy.type-references",
+            "expression": "2.16.0",
+            "define": "TF_HAS_TYPEREFERENCES"
+        }
+    ],
+    "noEngineReferences": false
+}
