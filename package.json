@@ -7,6 +7,10 @@
   "documentationUrl": "https://github.com/TwinFaerie/twinfaerie-initializer/",
   "changelogUrl": "https://github.com/TwinFaerie/twinfaerie-initializer/releases",
   "licensesUrl": "https://github.com/TwinFaerie/twinfaerie-initializer/blob/main/LICENSE",
+  "repository" : "https://github.com/TwinFaerie/twinfaerie-initializer",
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/@twinfaerie" 
+  },
   "author": {
     "name": "CuteRogue",
     "email": "cuterogue@twinfaerie.my.id",
