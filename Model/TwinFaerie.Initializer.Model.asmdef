@@ -2,7 +2,8 @@
     "name": "TwinFaerie.Initializer.Setting",
     "rootNamespace": "",
     "references": [
-        "TypeReferences"
+        "TypeReferences",
+        "TwinFaerie.OdinExtendedInspector"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -16,6 +17,11 @@
             "name": "com.solidalloy.type-references",
             "expression": "2.16.0",
             "define": "TF_HAS_TYPEREFERENCES"
+        },
+        {
+            "name": "com.twinfaerie.odinextendedinspector",
+            "expression": "1.0.0",
+            "define": "TF_HAS_TFODINEXTENDER"
         }
     ],
     "noEngineReferences": false

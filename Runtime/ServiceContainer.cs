@@ -51,22 +51,6 @@ namespace TF.Initializer
             {
                 InitService(Object.Instantiate(item.gameObject).GetComponent(item.GetType()) as IServiceMono);
             }
-
-            //InitSystem(new SceneHandler.SceneHandlerManager());
-            //InitSystem(new ServerHandler.ServerHandlerManager());
-            //InitSystem(new Item.ItemManager());
-            //InitSystem(new Interact.InteractManager());
-
-            ////InitSystem(new Inventory.InventoryManager()); -- Inventory disabled
-            ////InitSystem(new Game.InventoryDisplay.InventoryDisplayManager()); -- Inventory disabled
-
-            //// adding parent for monobehaviour system
-
-            //// put system initialize with monobehaviour here
-            //// you can either use new GameObject() or use Resources.Load if you already create template for easier set
-            //InitSystem(GameObject.Instantiate(Resources.Load<Audio.AudioManager>(Audio.AudioManager.ResourcesPath)));
-            //InitSystem(GameObject.Instantiate(Resources.Load<Reward.RewardManager>(Reward.RewardManager.ResourcesPath)));
-            //InitSystem(GameObject.Instantiate(Resources.Load<Share.ShareManager>(Share.ShareManager.ResourcesPath)));
         }
 
         private void InjectDependencies()

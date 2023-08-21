@@ -31,6 +31,9 @@ namespace TF.Initializer.Editor
                     instance.afterSettingsSaved += () =>
                     {
                         setupSetting.ServiceGroup = instance.Get<ServiceGroup, PackageSettingsRepository>("required.services");
+                        EditorUtility.SetDirty(setupSetting);
+                        AssetDatabase.SaveAssetIfDirty(setupSetting);
+                        AssetDatabase.Refresh();
                     };
                 }
 
