@@ -24,8 +24,8 @@ namespace TF.Initializer
         [Inherits(typeof(IServiceMono), ShortName = true, IncludeAdditionalAssemblies = new[] { "Assembly-CSharp" })]
         [SerializeField] private List<TypeReference> monoServices;
 #else
-        [SerializeReference] private List<Type> services = new();
-        [SerializeReference] private List<Type> monoServices = new();
+        [SerializeReference] private List<string> services = new();
+        [SerializeReference] private List<string> monoServices = new();
 #endif
         [SerializeField] private List<MonoBehaviour> prefabServices;
 
