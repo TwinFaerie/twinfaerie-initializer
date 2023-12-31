@@ -6,7 +6,9 @@
         "TwinFaerie.Initializer",
         "TwinFaerie.Initializer.Setting"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
