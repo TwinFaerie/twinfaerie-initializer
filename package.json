@@ -1,6 +1,6 @@
 {
   "name": "com.twinfaerie.initializer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "displayName": "TwinFaerie Initializer",
   "description": "For standarize and easier system initialization on unity",
   "unity": "2020.3",
