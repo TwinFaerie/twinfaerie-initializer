@@ -1,5 +1,5 @@
 {
-    "name": "TwinFaerie.Initializer.Setting",
+    "name": "TwinFaerie.Initializer.Model",
     "rootNamespace": "",
     "references": [
         "TypeReferences",

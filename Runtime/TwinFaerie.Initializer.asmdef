@@ -2,7 +2,7 @@
     "name": "TwinFaerie.Initializer",
     "rootNamespace": "",
     "references": [
-        "TwinFaerie.Initializer.Setting"
+        "TwinFaerie.Initializer.Model"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

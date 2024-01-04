@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿#if !TF_HAS_TFODINEXTENDER
+using System.IO;
 using UnityEditor;
 using UnityEditor.SettingsManagement;
 using UnityEngine;
@@ -42,3 +43,4 @@ namespace TF.Initializer.Editor
         }
     }
 }
+#endif

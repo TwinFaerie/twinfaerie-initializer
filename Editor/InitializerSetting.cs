@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if !TF_HAS_TFODINEXTENDER
+using UnityEditor;
 using UnityEditor.SettingsManagement;
 
 namespace TF.Initializer.Editor
@@ -10,3 +11,4 @@ namespace TF.Initializer.Editor
         { }
     }
 }
+#endif

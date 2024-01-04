@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace TF.Initializer
 {
+    using Object = UnityEngine.Object;
+    
     public class ServiceContainer
     {
         internal static ServiceContainer Default { get; private set; }

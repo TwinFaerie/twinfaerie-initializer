@@ -4,7 +4,8 @@
     "references": [
         "Unity.Settings.Editor",
         "TwinFaerie.Initializer",
-        "TwinFaerie.Initializer.Setting"
+        "TwinFaerie.Initializer.Model",
+        "TwinFaerie.OdinExtendedInspector.Editor"
     ],
     "includePlatforms": [
         "Editor"
@@ -15,6 +16,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.twinfaerie.odinextendedinspector",
+            "expression": "1.0.0",
+            "define": "TF_HAS_TFODINEXTENDER"
+        }
+    ],
     "noEngineReferences": false
 }
