@@ -29,6 +29,11 @@ namespace TF.Initializer.Editor
             AssetDatabase.CreateAsset(serviceGroup, "Assets/Setting/Initializer/" + name + ".asset");
             AssetDatabase.SaveAssets();
         }
+
+        public void Destroy()
+        {
+            Object.DestroyImmediate(serviceGroup);
+        }
     }
 }
 #endif
