@@ -2,6 +2,7 @@ using System.IO;
 #if TF_HAS_TFODINEXTENDER
 using Sirenix.OdinInspector;
 #endif
+using UnityEditor;
 using UnityEngine;
 
 namespace TF.Initializer
@@ -19,7 +20,16 @@ namespace TF.Initializer
 
         public static InitializerSetupSetting GetInstance()
         {
-            return Resources.Load<InitializerSetupSetting>(Path.Combine(PATH, Path.GetFileNameWithoutExtension(FILENAME)));
+            var result =  Resources.Load<InitializerSetupSetting>(Path.Combine(PATH, Path.GetFileNameWithoutExtension(FILENAME)));
+            
+            if (result == null)
+            {
+                Directory.CreateDirectory(RESOURCES_PATH + PATH);
+                result = CreateInstance<InitializerSetupSetting>();
+                AssetDatabase.CreateAsset(result, Path.Combine(RESOURCES_PATH, PATH, FILENAME));
+            }
+
+            return result;
         }
     }
 }
