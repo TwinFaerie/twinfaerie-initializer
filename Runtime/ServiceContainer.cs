@@ -103,7 +103,7 @@ namespace TF.Initializer
             Object.DontDestroyOnLoad(service.gameObject);
 
             service.gameObject.name = service.GetType().Name;
-            service.gameObject.transform.parent = objectParent;
+            service.gameObject.transform.SetParent(objectParent);
 
             InitService(service as IServiceBase);
         }
