@@ -22,12 +22,14 @@ namespace TF.Initializer
         {
             var result =  Resources.Load<InitializerSetupSetting>(Path.Combine(PATH, Path.GetFileNameWithoutExtension(FILENAME)));
             
+            #if UNITY_EDITOR
             if (result == null)
             {
                 Directory.CreateDirectory(RESOURCES_PATH + PATH);
                 result = CreateInstance<InitializerSetupSetting>();
                 AssetDatabase.CreateAsset(result, Path.Combine(RESOURCES_PATH, PATH, FILENAME));
             }
+            #endif
 
             return result;
         }
