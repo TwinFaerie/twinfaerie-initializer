@@ -12,7 +12,7 @@ namespace TF.Initializer
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Init()
         {
-            ServiceContainer.Create();
+            ServiceContainer.Create(true);
             ServiceContainer.Default.InitServices();
         }
 

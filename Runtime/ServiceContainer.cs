@@ -15,8 +15,13 @@ namespace TF.Initializer
         private readonly Dictionary<Type, IServiceBase> services = new();
         private Transform objectParent;
 
-        internal static void Create()
+        internal static void Create(bool forced = false)
         {
+            if (forced)
+            {
+                Default = null;
+            }
+            
             Default ??= new ServiceContainer();
         }
 
