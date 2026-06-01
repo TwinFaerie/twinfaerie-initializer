@@ -27,7 +27,7 @@ namespace TF.Initializer
 
         internal void InitServices()
         {
-            ServiceGroup = InitializerSetupSetting.GetInstance().ServiceGroup;
+            ServiceGroup = InitializerSetupSetting.GetInstance().SelectedServiceGroup;
 
             InitAllServices();
             InjectDependencies();

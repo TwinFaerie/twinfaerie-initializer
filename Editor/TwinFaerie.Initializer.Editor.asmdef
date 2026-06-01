@@ -5,7 +5,8 @@
         "Unity.Settings.Editor",
         "TwinFaerie.Initializer",
         "TwinFaerie.Initializer.Model",
-        "TwinFaerie.OdinExtendedInspector.Editor"
+        "TwinFaerie.OdinExtendedInspector.Editor",
+        "TwinFaerie.OdinExtendedInspector"
     ],
     "includePlatforms": [
         "Editor"

@@ -1,6 +1,10 @@
 using System.IO;
 #if TF_HAS_TFODINEXTENDER
 using Sirenix.OdinInspector;
+#if TF_HAS_TFODINEXTENDER && UNITY_EDITOR
+using TF.OdinExtendedInspector;
+using UnityEditor.Build.Profile;
+#endif
 #endif
 using UnityEditor;
 using UnityEngine;
@@ -14,9 +18,31 @@ namespace TF.Initializer
         public const string FILENAME = "Initializer Setting.asset";
 
         #if TF_HAS_TFODINEXTENDER
+        #if UNITY_EDITOR
+        [SerializeField] private SerializedDictionary<BuildProfile, ServiceGroup> serviceGroupMap;
+        #endif
         [InlineEditor]
         #endif
-        public ServiceGroup ServiceGroup;
+        [SerializeField] private ServiceGroup defaultServiceGroup;
+        
+        public ServiceGroup SelectedServiceGroup => selectedServiceGroup ?? defaultServiceGroup;
+        
+        private ServiceGroup selectedServiceGroup;
+        
+        #if TF_HAS_TFODINEXTENDER && UNITY_EDITOR
+        public void SetServiceGroupByProfile(BuildProfile profile)
+        {
+            selectedServiceGroup = null;
+            if (serviceGroupMap.TryGetValue(profile, out var serviceGroup))
+            {
+                selectedServiceGroup = serviceGroup;
+                Debug.Log($"[TF.Initializer] ServiceGroup Override Detected by {profile.name} using {selectedServiceGroup.name}");
+            }
+            
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
+        }
+        #endif
 
         public static InitializerSetupSetting GetInstance()
         {
