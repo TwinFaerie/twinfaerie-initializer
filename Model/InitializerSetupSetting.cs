@@ -27,7 +27,7 @@ namespace TF.Initializer
         
         public ServiceGroup SelectedServiceGroup => selectedServiceGroup ?? defaultServiceGroup;
         
-        private ServiceGroup selectedServiceGroup;
+        [SerializeField, HideInInspector] private ServiceGroup selectedServiceGroup;
         
         #if TF_HAS_TFODINEXTENDER && UNITY_EDITOR
         public void SetServiceGroupByProfile(BuildProfile profile)
