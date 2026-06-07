@@ -1,6 +1,6 @@
 {
   "name": "com.twinfaerie.initializer",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "displayName": "TwinFaerie Initializer",
   "description": "For standarize and easier system initialization on unity",
   "unity": "2020.3",
@@ -12,9 +12,9 @@
     "registry": "https://npm.pkg.github.com/@twinfaerie"
   },
   "author": {
-    "name": "Twin Faerie",
-    "email": "support@twinfaerie.my.id",
-    "url": "https://www.twinfaerie.my.id/"
+    "name": "TwinFaerie",
+    "url": "https://www.twinfaerie.com/",
+    "email": "support@twinfaerie.com"
   },
   "dependencies": {
     "com.unity.settings-manager": "2.0.1"
